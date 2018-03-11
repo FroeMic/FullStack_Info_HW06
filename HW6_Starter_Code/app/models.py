@@ -1,5 +1,6 @@
 import sqlite3 as sql
 
+# the file path of our database
 DB_PATH = 'app.db'
 
 def get_last_row_id(con):
@@ -43,8 +44,7 @@ def retrieve_one_addresss_by_id(id):
             SELECT * 
             FROM `address`
             WHERE `id`=?;
-        ''',
-        (id))
+        ''', [id])
 
         record = cursor.fetchone()
         if (record is not None):
