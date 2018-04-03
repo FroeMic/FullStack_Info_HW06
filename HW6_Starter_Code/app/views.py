@@ -6,6 +6,7 @@ from .utils import dict_to_obj, flash_message
 
 @app.errorhandler(404)
 def page_not_found(e):
+    # random comment
     return render_template('404.html'), 404
 
 @app.route('/')
